@@ -3,12 +3,20 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title><%= message %></title>
+    <title>Zenék</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <script src='main.js'></script>
 </head>
 <body>
-    <p><%= message %></p>
+    <ul>
+        <% zenek.forEach(zene => { %>
+            <li><%= zene.id %>&nbsp;</li> 
+          <li><%= zene.title %>&nbsp;</li>  
+          <li><%= zene.artist %>&nbsp;</li> 
+          <li><%= zene.lenght %>&nbsp;</li> 
+        <% }); %>
+    </ul>
+    <p><a href="/ujzene">Új Zene hozáadá</a></p>
 </body>
 </html>
